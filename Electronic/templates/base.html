@@ -23,6 +23,10 @@
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="{% static '/css/main.css' %} ">
 <link rel="stylesheet" href="{% static '/css/color_skins.css' %}">
+
+<link rel="stylesheet" href="{% static 'vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css' %}">
+<link rel="stylesheet" href="{% static 'vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.css' %}" />
+<link rel="stylesheet" href="{% static 'vendor/multi-select/css/multi-select.css' %}">
 </head>
 <body class="theme-blue">
 
@@ -798,10 +802,28 @@
 <script src="{% static 'vendor/dropify/js/dropify.min.js' %}"></script>
 
 
+<script src="{% static 'vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.js' %}"></script> <!-- Bootstrap Colorpicker Js -->
+<script src="{% static 'vendor/jquery-inputmask/jquery.inputmask.bundle.js' %}"></script> <!-- Input Mask Plugin Js -->
+<script src="{% static 'vendor/jquery.maskedinput/jquery.maskedinput.min.js' %}"></script>
+<script src="{% static 'vendor/multi-select/js/jquery.multi-select.js' %}"></script> <!-- Multi Select Plugin Js -->
+<script src="{% static 'vendor/bootstrap-multiselect/bootstrap-multiselect.js' %}"></script>
+<script src="{% static 'vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap-tagsinput/bootstrap-tagsinput.js' %}"></script>
+
+
+
+
 <script src="{% static 'bundles/mainscripts.bundle.js' %} "></script>
 <script src="{% static 'js/index.js' %} "></script>
 <script src=" {% static 'bundles/morrisscripts.bundle.js' %}"></script>
 <script src="{% static 'js/pages/forms/dropify.js' %} "></script>
+<script src="{% static 'js/pages/forms/advanced-form-elements.js' %}"></script>
+
+
+<script src="{% static 'bundles/mainscripts.bundle.js' %}"></script>
+<script src="{% static 'bundles/morrisscripts.bundle.js' %}"></script>
+
+
 
 </body>
 </html>
