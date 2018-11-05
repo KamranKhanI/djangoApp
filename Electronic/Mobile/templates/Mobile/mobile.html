@@ -2,12 +2,63 @@
 
 {% block content %}
 
-    <div class="card">
-        <div class="header">
-                            <h2>Input with Checkboxes and radios</h2>
-                        </div>
-                        <div class="body">
-                            <div class="dropify-wrapper"><div class="dropify-message"><span class="file-icon"></span> <p>Drag and drop a file here or click</p><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input class="dropify" type="file"><button class="dropify-clear" type="button">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="file-icon"></span> <span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+    <div class="card big-light">
+                        <div class="card-header">Mobile Entry</div>
+                        <div class="card-body">
+                            <form method="post" action="">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                       <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Company</span>
+                                </div>
+                                <input class="form-control" aria-describedby="inputGroup-sizing-sm" aria-label="Large" type="text">
+                            </div>
+                                       <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Model</span>
+                                </div>
+                                <input class="form-control" aria-describedby="inputGroup-sizing-sm" aria-label="Large" type="text">
+                            </div>
+                                             <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Price</span>
+                                </div>
+                                <input class="form-control" aria-describedby="inputGroup-sizing-sm" aria-label="Large" type="text">
+                            </div>
+
+                                </div>
+                                 <div class="col-md-6">
+                                        <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Year</span>
+                                </div>
+                                <input class="form-control" aria-describedby="inputGroup-sizing-sm" aria-label="Large" type="text">
+                            </div>
+                                        <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Color</span>
+                                </div>
+                                <input class="form-control" aria-describedby="inputGroup-sizing-sm" aria-label="Large" type="text">
+                            </div>
+
+                                 </div>
+                            </div>
+
+                            </form>
+
+
+
+
                         </div>
                     </div>
+
+
+
+
+
+
+
+
 {% endblock content %}
