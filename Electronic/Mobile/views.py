@@ -15,8 +15,20 @@ def Mobile (request):
 
 
     if (request.method=='POST'):
+        company=request.POST.get("company","")
+        color = request.POST.get("color", "")
+        modelno = request.POST.get("modelno", "")
+        condition = request.POST.get("condition", "")
+       # buy = request.POST.get("buydate", "")
+        price = request.POST.get("price", "")
 
-        return render(request, 'Mobile/newmobile.html', {})
+        datasave=mob(company=company,color=color,modelno=modelno,condition=condition,price=price)
+        datasave.save()
+        alldata = mob.objects.all()
+
+
+
+        return render(request, 'Mobile/newmobile.html', {'data':alldata})
 
     else:
         mydata = mob.objects.all()

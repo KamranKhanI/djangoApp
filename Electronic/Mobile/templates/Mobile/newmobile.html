@@ -3,75 +3,14 @@
 {% block content %}
 
     <div class="card big-light">
-                        <div class="card-header">Mobile Entry</div>
+                        <div class="card-header">Mobile Details</div>
+
+
                         <div class="card-body">
-                            <form method="post" action="">
-
-                            <div class="row">
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                    <label>Company</label>
-                                    <input class="form-control" required="" name="company" type="text">
-                                     </div>
-
-                                    <div class="form-group">
-                                    <label>Condition</label>
-                                    <input class="form-control" required="" name="condition" type="text">
-                                     </div>
-
-
-
-                                </div>
-                                 <div class="col-md-4">
-
-                                      <div class="form-group">
-                                    <label>Model</label>
-                                    <input class="form-control" required="" name="modelno" type="text">
-                                     </div>
-                                     <div class="form-group">
-                                    <label>Price</label>
-                                    <input class="form-control" required="" name="price" type="text">
-                                     </div>
-
-                                     <button class="btn btn-outline-info align-center" type="submit">Add Entry</button>
-
-
-
-
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                    <label>Color</label>
-                                    <input class="form-control" required="" name="color" type="text">
-                                     </div>
-
-                                       <div class="form-group">
-                                    <label>Buy Date</label>
-
-                                        <input class="form-control" name="date" data-date-autoclose="true" data-provide="datepicker" data-date-format="dd/mm/yyyy">
-
-                                </div>
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-                            </form>
-                        </div>
-
-
-
-    <hr>
-
-
-    <div class="body table-responsive">
+                           <a href="#largeModal" data-toggle="modal" data-target="#largeModal" class="fa-align-right">
+                            <input type="button" class="btn btn-primary " value="New Entry">
+                           </a>
+                             <div class="body table-responsive">
                             <table class="table table-hover m-b-0">
                                 <thead>
                                     <tr>
@@ -106,7 +45,7 @@
 
                                         </td>
                                         <td >
-                                            <input type="button" class="btn btn-sm" value="edit">
+                                            <button class="btn btn-sm btn-danger js-sweetalert" data-type="confirm">Delete</button>
                                             <input type="button" class="btn btn-sm" value="delete">
                                         </td>
                                     </tr>
@@ -116,10 +55,80 @@
                                 </tbody>
                             </table>
                         </div>
+                        </div>
 </div>
 
 
 
+    <div tabindex="-1" class="modal fade" id="largeModal" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="largeModalLabel">Modal title</h4>
+            </div>
+             <form method="post" action="">
+            <div class="modal-body">
+
+                                {% csrf_token %}
+
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                    <label>Company</label>
+                                    <input class="form-control" required="" name="company" type="text">
+                                     </div>
+
+                                    <div class="form-group">
+                                    <label>Condition</label>
+                                    <input class="form-control" required="" name="condition" type="text">
+                                     </div>
+
+
+
+                                </div>
+                                 <div class="col-md-4">
+
+                                      <div class="form-group">
+                                    <label>Model</label>
+                                    <input class="form-control" required="" name="modelno" type="text">
+                                     </div>
+                                     <div class="form-group">
+                                    <label>Price</label>
+                                    <input class="form-control" required="" name="price" type="text">
+                                     </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                    <label>Color</label>
+                                    <input class="form-control" required="" name="color" type="text">
+                                     </div>
+
+                                       <div class="form-group">
+                                    <label>Buy Date</label>
+
+                                        <input class="form-control" name="buydate" data-date-autoclose="true" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+
+                                </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">SAVE</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">CLOSE</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
